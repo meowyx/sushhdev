@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .bg-card-gradient {
+    /* Define your custom styles here */
+  }
+
+  .shadow-card {
+    /* Define your custom styles here */
+  }
+
+  .backdrop-blur {
+    /* Define your custom styles here */
+  }
+
+  .rounded-lg {
+    /* Define your custom styles here */
+  }
+
+  .border {
+    /* Define your custom styles here */
+  }
+
+  .border-opacity-20 {
+    /* Define your custom styles here */
+  }
+}
+
+.card {
+  @apply bg-card-gradient;
+  @apply shadow-card;
+  @apply backdrop-blur;
+  @apply rounded-lg;
+  @apply border;
+  @apply border-opacity-20;
+}
