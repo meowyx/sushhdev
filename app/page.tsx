@@ -10,7 +10,7 @@ export default function Home() {
         </h1>
         <p className="text-lg">
           Welcome to my digital garden—a space where I explore the vast
-          landscape of tech 🚀 and tools 🛠️. It's an ever-evolving space,
+          landscape of tech 🚀 and tools 🛠️. It&apos;s an ever-evolving space,
           reflecting my growth 🌿 and discoveries 🔍.
         </p>
       </div>
