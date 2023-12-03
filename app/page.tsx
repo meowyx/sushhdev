@@ -9,9 +9,9 @@ export default function Home() {
           Crafting a content garden that evolves with my tech explorations
         </h1>
         <p className="text-lg">
-          Eager to delve into emerging technologies and tools, actively
-          participating in open-source projects to make an impact in the
-          community.
+          Welcome to my digital garden—a space where I explore the vast
+          landscape of tech 🚀 and tools 🛠️. It's an ever-evolving space,
+          reflecting my growth 🌿 and discoveries 🔍.
         </p>
       </div>
       <div className="cards-container flex flex-wrap justify-center">
