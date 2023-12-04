@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="prose dark:prose-invert ">
+    <div className="prose ">
       <div className=" text-white p-10">
-        <h1 className="text-3xl font-bold mb-4 text-center">
+        <h1 className="text-3xl font-bold mb-4 text-white text-center">
           Crafting a content garden that evolves with my tech explorations
         </h1>
-        <p className="text-lg">
+        <p className="text-lg text-white">
           Welcome to my digital garden—a space where I explore the vast
           landscape of tech 🚀 and tools 🛠️. It&apos;s an ever-evolving space,
           reflecting my growth 🌿 and discoveries 🔍.
