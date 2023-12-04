@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "custom-color": "#02000F",
+        "custom-color": "#171717",
       },
       backgroundImage: {
         "card-gradient":
