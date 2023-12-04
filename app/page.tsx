@@ -14,22 +14,24 @@ export default function Home() {
           reflecting my growth 🌿 and discoveries 🔍.
         </p>
       </div>
-      <div className="cards-container flex flex-wrap justify-center">
+      <div className="cards-container flex flex-wrap justify-center ">
         {allPosts.map((post) => (
-          <div
+          <Link
+            href={post.slug}
+            className="mx-2 my-2 hover:shadow-[0_0_15px_#95C8E5] transition-shadow"
             key={post._id}
-            className="card pt-2 pb-6 pl-6 pr-6 w-[300px] h-[236px] flex-shrink-0 mx-auto"
           >
-            <Link href={post.slug}>
+            <div className="card pt-2 pb-6 pl-6 pr-6 w-[300px] h-[236px] flex-shrink-0 mx-auto">
               <h2 className="text-white text-2xl font-semibold mb-4 cursor-pointer">
                 {post.title}
               </h2>
-            </Link>
-            {post.description && (
-              <p className="text-[#94A3B8] mb-6">{post.description}</p>
-            )}
-            {/* You can add buttons or other elements here as needed */}
-          </div>
+
+              {post.description && (
+                <p className="text-[#94A3B8] mb-6">{post.description}</p>
+              )}
+              {/* You can add buttons or other elements here as needed */}
+            </div>
+          </Link>
         ))}
       </div>
     </div>
