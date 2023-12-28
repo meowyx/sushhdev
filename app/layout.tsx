@@ -35,6 +35,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <Link href="/projects" className="hover:underline">
                   Projects
                 </Link>
+                <Link href="https://cv.sushh.dev/" className="hover:underline">
+                  Resume
+                </Link>
                 <Link href="/about" className="hover:underline">
                   About
                 </Link>
