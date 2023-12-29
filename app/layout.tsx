@@ -29,11 +29,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </Link>
 
               <nav className="ml-auto text-sm font-medium space-x-6">
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
                 <Link href="/projects" className="hover:underline">
                   Projects
+                </Link>
+                <Link
+                  href="https://terminal.sushh.dev/"
+                  className="hover:underline"
+                >
+                  Terminal
                 </Link>
                 <Link href="https://cv.sushh.dev/" className="hover:underline">
                   Resume
