@@ -29,20 +29,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </Link>
 
               <nav className="ml-auto text-sm font-medium space-x-6">
-                <Link href="/projects" className="hover:underline">
-                  Projects
-                </Link>
-                <Link
-                  href="https://terminal.sushh.dev/"
-                  className="hover:underline"
-                >
-                  Terminal
-                </Link>
                 <Link href="https://cv.sushh.dev/" className="hover:underline">
                   Resume
                 </Link>
                 <Link href="/about" className="hover:underline">
                   About
+                </Link>
+                <Link href="https://dev.to/meowy" className="hover:underline">
+                  Dev Blogs
                 </Link>
               </nav>
             </div>
