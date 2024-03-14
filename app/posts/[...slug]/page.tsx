@@ -4,14 +4,14 @@ import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
 
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  return new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  }).format(date);
-};
+// const formatDate = (dateString: string) => {
+//   const date = new Date(dateString);
+//   return new Intl.DateTimeFormat("en-US", {
+//     year: "numeric",
+//     month: "short",
+//     day: "numeric",
+//   }).format(date);
+// };
 interface PostProps {
   params: {
     slug: string[];
@@ -41,7 +41,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    date: post.date,
+    // date: post.date,
   };
 }
 
@@ -57,11 +57,11 @@ export default async function PostPage({ params }: PostProps) {
   if (!post) {
     notFound();
   }
-  const formattedDate = formatDate(post.date);
+  // const formattedDate = formatDate(post.date);
   return (
     <article className="py-6 prose prose-invert text-white">
       <h1 className="mb-2 text-white">
-        {formattedDate}
+        {/* {formattedDate} */}
         {post.title}
       </h1>
       {post.description && (

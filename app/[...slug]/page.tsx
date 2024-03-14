@@ -4,14 +4,14 @@ import { allPages } from "contentlayer/generated";
 
 import { Mdx } from "@/components/mdx-components";
 
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  return new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  }).format(date);
-};
+// const formatDate = (dateString: string) => {
+//   const date = new Date(dateString);
+//   return new Intl.DateTimeFormat("en-US", {
+//     year: "numeric",
+//     month: "short",
+//     day: "numeric",
+//   }).format(date);
+// };
 interface PageProps {
   params: {
     slug: string[];
@@ -41,7 +41,7 @@ export async function generateMetadata({
   return {
     title: page.title,
     description: page.description,
-    date: page.date,
+    // date: page.date,
   };
 }
 
@@ -61,7 +61,7 @@ export default async function PagePage({ params }: PageProps) {
   return (
     <article className="py-6 prose prose-invert text-white">
       <h1>
-        {page.date}
+        {/* {page.date} */}
         {page.title}
       </h1>
       {page.description && (
