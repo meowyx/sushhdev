@@ -4,7 +4,7 @@ import { allPages } from "contentlayer/generated";
 
 import { Mdx } from "@/components/mdx-components";
 
-const formatDate = (dateString) => {
+const formatDate = (dateString: string) => {
   const date = new Date(dateString);
   return new Intl.DateTimeFormat("en-US", {
     year: "numeric",
