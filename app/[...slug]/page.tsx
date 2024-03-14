@@ -57,11 +57,11 @@ export default async function PagePage({ params }: PageProps) {
   if (!page) {
     notFound();
   }
-  const formattedDate = formatDate(page.date);
+
   return (
     <article className="py-6 prose prose-invert text-white">
       <h1>
-        {formattedDate}
+        {page.date}
         {page.title}
       </h1>
       {page.description && (

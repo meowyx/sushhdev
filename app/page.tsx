@@ -27,8 +27,7 @@ export default function Home() {
                 <div className="text-white">
                   <p className="hover:text-orange-200">
                     <p className="hover:text-orange-200">
-                      <span>{formattedDate}</span>
-                      <span style={{ margin: "0 10px" }}>{post.title}</span>
+                      <span>{post.title}</span>
                     </p>
                   </p>
                 </div>
