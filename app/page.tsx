@@ -1,39 +1,40 @@
 import { allPosts } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { Analytics } from "@/components/analytics";
+
 export default function Home() {
   return (
     <div className="prose ">
-      <div className=" text-white p-10">
-        <h1 className="text-3xl font-bold mb-4 text-white text-center">
-          Crafting a content garden that evolves with my tech explorations
-        </h1>
-        <p className="text-lg text-white">
-          Welcome to my digital garden—a space where I explore the vast
-          landscape of tech 🚀 and tools 🛠️. It&apos;s an ever-evolving space,
-          reflecting my growth 🌿 and discoveries 🔍.
+      <div className="text-white">
+        <p className="text-xl font-semibold mb-2 text-white text-left hover:text-orange-300">
+          read my blog
         </p>
       </div>
-      <div className="cards-container flex flex-wrap justify-center ">
-        {allPosts.map((post) => (
-          <Link
-            href={post.slug}
-            className="mx-2 my-2 hover:shadow-[0_0_15px_#95C8E5] transition-shadow"
-            key={post._id}
-          >
-            <Analytics />
-            <div className="card pt-2 pb-6 pl-6 pr-6 w-[300px] h-[236px] flex-shrink-0 mx-auto">
-              <h2 className="text-white text-2xl font-semibold mb-4 cursor-pointer">
-                {post.title}
-              </h2>
-
-              {post.description && (
-                <p className="text-[#94A3B8] mb-6">{post.description}</p>
-              )}
-              {/* You can add buttons or other elements here as needed */}
+      <div className="posts-container">
+        {allPosts.map((post) => {
+          // Assuming post.date is a string in ISO format
+          const formattedDate = new Date(post.date).toLocaleDateString(
+            "en-US",
+            {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }
+          );
+          return (
+            <div key={post._id} className="post-entry">
+              <Link href={post.slug}>
+                <div className="text-white">
+                  <p className="hover:text-orange-200">
+                    <p className="hover:text-orange-200">
+                      <span>{post.title}</span>
+                    </p>
+                  </p>
+                </div>
+              </Link>
             </div>
-          </Link>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
